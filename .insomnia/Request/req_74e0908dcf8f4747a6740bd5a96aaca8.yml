@@ -1,0 +1,41 @@
+_id: req_74e0908dcf8f4747a6740bd5a96aaca8
+type: Request
+parentId: wrk_88ac2382df1d4fbd8a0eac514c8ae4a6
+modified: 1647882507619
+created: 1647882370924
+url: http://localhost:3000/db/mydb/value
+name: db/:dbname/value
+description: |-
+  ### GET /db/:dbname/value
+
+  Gets the current value from counter database :dbname.
+
+  Returns the current counter value.
+
+  Can only be used on counter.
+
+  ```shell
+  curl -X GET https://localhost:3000/db/counter/value
+  ```
+
+  ```json
+  1
+  ```
+method: GET
+body: {}
+parameters:
+  - id: pair_e3f86de095974860ab4f789b3e178320
+    name: dbname
+    value: test
+    description: ""
+    disabled: true
+headers: []
+authentication: {}
+metaSortKey: -1647882014335
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

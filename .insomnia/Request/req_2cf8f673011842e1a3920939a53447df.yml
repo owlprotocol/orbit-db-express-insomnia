@@ -1,0 +1,47 @@
+_id: req_2cf8f673011842e1a3920939a53447df
+type: Request
+parentId: wrk_88ac2382df1d4fbd8a0eac514c8ae4a6
+modified: 1647896746284
+created: 1647882051383
+url: http://localhost:3000/db/mydb1
+name: db/:dbname
+description: >-
+  ### GET /db/:dbname
+
+
+  Gets the details of a database with name :dbname.
+
+
+  Returns information about the database as a JSON object.
+
+
+  ```shell
+
+  curl https://localhost:3000/db/docstore
+
+  ```
+
+
+  ```json
+
+  {"address":{"root":"zdpuAmnfJZ6UTssG5Ns3o8ALXZJXVx5eTLTxf7gfFzHxurbJq","path":"docstore"},"dbname":"docstore","id":"/orbitdb/zdpuAmnfJZ6UTssG5Ns3o8ALXZJXVx5eTLTxf7gfFzHxurbJq/docstore","options":{"create":"true","indexBy":"_id","localOnly":false,"maxHistory":-1,"overwrite":true,"replicate":true},"type":"docstore"}
+
+  ```
+method: GET
+body: {}
+parameters:
+  - id: pair_e3f86de095974860ab4f789b3e178320
+    name: dbname
+    value: test
+    description: ""
+    disabled: true
+headers: []
+authentication: {}
+metaSortKey: -1647882051383
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

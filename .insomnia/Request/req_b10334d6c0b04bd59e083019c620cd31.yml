@@ -1,0 +1,38 @@
+_id: req_b10334d6c0b04bd59e083019c620cd31
+type: Request
+parentId: wrk_88ac2382df1d4fbd8a0eac514c8ae4a6
+modified: 1647883315832
+created: 1647883300935
+url: http://localhost:3000/db/mydb
+name: db/:dbname
+description: |-
+  ### DELETE /db/:dbname
+
+  Deletes the local database :dbname. This does not delete any data from peers.
+
+  ```shell
+  curl -X DELETE https://localhost:3000/db/docstore
+  ```
+method: DELETE
+body:
+  mimeType: application/json
+  text: ""
+parameters:
+  - id: pair_e3f86de095974860ab4f789b3e178320
+    name: dbname
+    value: test
+    description: ""
+    disabled: true
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_a3adb6f6cc62452092bb6e74c6179490
+authentication: {}
+metaSortKey: -1647882013735
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

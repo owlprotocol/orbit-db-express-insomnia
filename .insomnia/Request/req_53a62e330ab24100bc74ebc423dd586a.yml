@@ -1,0 +1,118 @@
+_id: req_53a62e330ab24100bc74ebc423dd586a
+type: Request
+parentId: wrk_88ac2382df1d4fbd8a0eac514c8ae4a6
+modified: 1647898478490
+created: 1647882673378
+url: http://localhost:3000/db/mydb1
+name: db/:dbname
+description: >-
+  ### POST /db/:dbname
+
+
+  Creates a new database and returns information about the newly created database
+
+  or opens an existing database with the same name.
+
+
+  Returns information about the database as a JSON object.
+
+
+  The OrbitDB options ```create=true``` and ```type=eventlog|feed|docstore|keyvalue|counter```
+
+  must be sent with the POST otherwise an error is thrown.
+
+
+  ```shell
+
+  curl https://localhost:3000/db/docstore -d "create=true" -d "type=docstore"
+
+  ```
+
+
+  ```json
+
+  {"address":{"root":"zdpuAmnfJZ6UTssG5Ns3o8ALXZJXVx5eTLTxf7gfFzHxurbJq","path":"docstore"},"dbname":"docstore","id":"/orbitdb/zdpuAmnfJZ6UTssG5Ns3o8ALXZJXVx5eTLTxf7gfFzHxurbJq/docstore","options":{"create":"true","indexBy":"_id","localOnly":false,"maxHistory":-1,"overwrite":true,"replicate":true},"type":"docstore"}
+
+  ```
+
+
+  Additional OrbitDB-specific flags can also be passed. For example, if the index
+
+  field must be changed then the indexBy flag can be specified as an additional
+
+  POST param (this would apply to type docstore only):
+
+
+  ```shell
+
+  curl https://localhost:3000/db/docstore -d "create=true" -d "type=docstore" -d "indexBy=name"
+
+  ```
+
+
+  Parameters can also be passed as JSON. This is useful if additional parameters
+
+  such as accessController need to be specified:
+
+
+  ```shell
+
+  curl -H "Content-Type: application/json" --data '{"create":"true","type":"feed","accessController":{"type": "orbitdb","write": ["1234"]}}'
+
+  ```
+
+
+  To open an existing database, specify the address of the database. If the
+
+  database does not exist locally it will be fetched from the swarm.
+
+
+  The address MUST be URL escaped.
+
+
+  ```shell
+
+  curl -X POST https://localhost:3000/db/zdpuAmnfJZ6UTssG5Ns3o8ALXZJXVx5eTLTxf7gfFzHxurbJq%2Fdocstore
+
+  ```
+
+
+  By default, OrbitDB will open the database if one already exists with the same
+
+  name. To always overwrite the existing database with a new one, pass the
+
+  overwrite flag:
+
+
+  ```shell
+
+  curl https://localhost:3000/db/docstore -d "create=true" -d "type=docstore" -d "overwrite=true"
+
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    { 
+    	"create": true,
+    	"type": "docstore"
+    }
+parameters:
+  - id: pair_e3f86de095974860ab4f789b3e178320
+    name: dbname
+    value: test
+    description: ""
+    disabled: true
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_a3adb6f6cc62452092bb6e74c6179490
+authentication: {}
+metaSortKey: -1647882014085
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

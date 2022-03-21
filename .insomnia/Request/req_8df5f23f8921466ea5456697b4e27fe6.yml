@@ -1,0 +1,69 @@
+_id: req_8df5f23f8921466ea5456697b4e27fe6
+type: Request
+parentId: wrk_88ac2382df1d4fbd8a0eac514c8ae4a6
+modified: 1647898326279
+created: 1647883206647
+url: http://localhost:3000/db/mydb1/put
+name: db/:dbname/put
+description: >
+  ### POST|PUT /db/:dbname/put
+
+
+  Puts a record to the database :dbname.
+
+
+  Returns a multihash of the record entry.
+
+
+  ```shell
+
+  curl -X POST https://localhost:3000/db/docstore/put -H "Content-Type: application/json" -d '{"_id":1, "value": "test"}'
+
+  ```
+
+
+  ```json
+
+  zdpuAkkFaimxyRE2bsiLRSiybkku3oDi4vFHqPZh29BABZtZU
+
+  ```
+
+
+  For the keyvalue store, a JSON object containing the variables `key` and
+
+  `value` must be passed in the POST data:
+
+
+  ```shell
+
+  curl -X POST https://localhost:3000/db/keyvalue/put  -H "Content-Type: application/json" -d '{"key":"Key","value":{ "name": "Value" }}'
+
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"_id": "1",
+    	"name": "Alice",
+    	"score": 1
+    }
+parameters:
+  - id: pair_e3f86de095974860ab4f789b3e178320
+    name: dbname
+    value: test
+    description: ""
+    disabled: true
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_a3adb6f6cc62452092bb6e74c6179490
+authentication: {}
+metaSortKey: -1647882013935
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

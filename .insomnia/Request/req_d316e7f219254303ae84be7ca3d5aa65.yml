@@ -1,0 +1,44 @@
+_id: req_d316e7f219254303ae84be7ca3d5aa65
+type: Request
+parentId: wrk_88ac2382df1d4fbd8a0eac514c8ae4a6
+modified: 1647883325367
+created: 1647883233791
+url: http://localhost:3000/db/mydb/put
+name: db/:dbname/inc
+description: |-
+  ### POST|PUT /db/:dbname/inc
+
+  Increments the counter database :dbname by 1.
+
+  Returns a multihash of the new counter value.
+
+  ```shell
+  curl -X POST https://localhost:3000/db/counter/inc
+  ```
+
+  ```json
+  zdpuAmHw9Tcc4pyVjcVX3rJNJ7SGffmu4EwjodzmaPBVGGzbd
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: ""
+parameters:
+  - id: pair_e3f86de095974860ab4f789b3e178320
+    name: dbname
+    value: test
+    description: ""
+    disabled: true
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_a3adb6f6cc62452092bb6e74c6179490
+authentication: {}
+metaSortKey: -1647882013885
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

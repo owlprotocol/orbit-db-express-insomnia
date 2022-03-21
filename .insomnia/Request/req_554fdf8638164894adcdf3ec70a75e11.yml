@@ -1,0 +1,39 @@
+_id: req_554fdf8638164894adcdf3ec70a75e11
+type: Request
+parentId: wrk_88ac2382df1d4fbd8a0eac514c8ae4a6
+modified: 1647882473032
+created: 1647881977287
+url: http://localhost:3000/dbs
+name: dbs
+description: >-
+  ### GET /dbs
+
+
+  Lists all databases on the current peer.
+
+
+  ```shell
+
+  curl https://localhost:3000/dbs
+
+  ```
+
+
+  ```json
+
+  {"docstore":{"address":{"root":"zdpuAmnfJZ6UTssG5Ns3o8ALXZJXVx5eTLTxf7gfFzHxurbJq","path":"docstore"},"dbname":"docstore","id":"/orbitdb/zdpuAmnfJZ6UTssG5Ns3o8ALXZJXVx5eTLTxf7gfFzHxurbJq/docstore","options":{"create":"true","indexBy":"_id","localOnly":false,"maxHistory":-1,"overwrite":true,"replicate":true},"type":"docstore"},"feed":{"address":{"root":"zdpuAo6DwafMiyuzhfEojXJThFPdv4Eu9hLfaWrKD6GSVzyjj","path":"feed"},"dbname":"feed","id":"/orbitdb/zdpuAo6DwafMiyuzhfEojXJThFPdv4Eu9hLfaWrKD6GSVzyjj/feed","options":{"create":"true","localOnly":false,"maxHistory":-1,"overwrite":true,"replicate":true},"type":"feed"}}
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1647882051433
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

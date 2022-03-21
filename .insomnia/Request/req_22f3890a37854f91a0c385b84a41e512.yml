@@ -1,0 +1,52 @@
+_id: req_22f3890a37854f91a0c385b84a41e512
+type: Request
+parentId: wrk_88ac2382df1d4fbd8a0eac514c8ae4a6
+modified: 1647883361646
+created: 1647883348864
+url: http://localhost:3000/db/mydb/myitem
+name: db/:dbname/:item
+description: >-
+  ### DELETE /db/:dbname/:item
+
+
+  Deletes the item specified by :item from the database :dbname.
+
+
+  Returns the multihash of the item entry deleted or an error if no item is found.
+
+
+  ```shell
+
+  curl -X DELETE https://localhost:3000/db/docstore/1
+
+  ```
+
+
+  ```json
+
+  zdpuB39Yv1LV6CMYuNUgRi125utDpUoiP7PDsumjn1T4ASkzN
+
+  ```
+method: DELETE
+body:
+  mimeType: application/json
+  text: ""
+parameters:
+  - id: pair_e3f86de095974860ab4f789b3e178320
+    name: dbname
+    value: test
+    description: ""
+    disabled: true
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_a3adb6f6cc62452092bb6e74c6179490
+authentication: {}
+metaSortKey: -1647882013685
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

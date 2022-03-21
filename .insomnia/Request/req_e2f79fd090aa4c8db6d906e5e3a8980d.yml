@@ -1,0 +1,50 @@
+_id: req_e2f79fd090aa4c8db6d906e5e3a8980d
+type: Request
+parentId: wrk_88ac2382df1d4fbd8a0eac514c8ae4a6
+modified: 1647898386719
+created: 1647882520661
+url: http://localhost:3000/db/mydb1/1
+name: db/:dbname/:item
+description: >-
+  ### GET /db/:dbname/:item
+
+
+  Gets a record identified by :item from the database :dbname.
+
+
+  Returns a list of found items as a JSON array.
+
+
+  For the data type docstore, :item must be a value identified by the index field (set using indexBy).
+
+
+  ```shell
+
+  curl -X GET https://localhost:3000/db/docstore/1
+
+  ```
+
+
+  ```json
+
+  [{"_id":1, "value": "test"}]
+
+  ```
+method: GET
+body: {}
+parameters:
+  - id: pair_e3f86de095974860ab4f789b3e178320
+    name: dbname
+    value: test
+    description: ""
+    disabled: true
+headers: []
+authentication: {}
+metaSortKey: -1647882014285
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

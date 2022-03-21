@@ -1,0 +1,72 @@
+_id: req_407165303adb4618ae60222bdfc9a94d
+type: Request
+parentId: wrk_88ac2382df1d4fbd8a0eac514c8ae4a6
+modified: 1647882627443
+created: 1647882563750
+url: http://localhost:3000/db/mydb/iterator
+name: db/:dbname/iterator
+description: >-
+  ### GET /db/:dbname/iterator
+
+
+  Gets items from an eventlog or feed database :dbname.
+
+
+  Returns a list of matching objects as a JSON array.
+
+
+  Can only be used on eventlog|feed.
+
+
+  ```shell
+
+  curl -X GET https://localhost:3000/db/feed/iterator
+
+  ```
+
+
+  ```json
+
+  [{"IPFS":"https://ipfs.io"}]
+
+  ```
+
+
+  Additional options can be passed to OrbitDB to return different entries.
+
+
+  ```shell
+
+  curl -X GET https://localhost:3000/db/feed/iterator -d 'limit=-1'
+
+  ```
+
+
+  ```json
+
+  [{"OrbitDB":"https://github.com/orbitdb/orbit-db"},{"IPFS":"https://ipfs.io"}]
+
+  ```
+
+
+  See [OrbitDB's Iterator API](https://github.com/orbitdb/orbit-db/blob/master/API.md#iteratoroptions-1)
+
+  for more information.
+method: GET
+body: {}
+parameters:
+  - id: pair_e3f86de095974860ab4f789b3e178320
+    name: dbname
+    value: test
+    description: ""
+    disabled: true
+headers: []
+authentication: {}
+metaSortKey: -1647882014235
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
